@@ -14,10 +14,10 @@ var server = http.createServer (function (req, res) {
 
     // Note we no longer have an index.html file, but we handle the cases since that's what the browser will request
     case '/':
-      sendFile(res, Event1.html,'text/html')
+      sendFile(res, 'Event1.html','text/html')
       break
     case '/index.html':
-      sendFile(res, Event1.html,'text/html')
+      sendFile(res, 'Event1.html','text/html')
       break
     case '/README.md':
 	  sendFile(res, 'README.md', 'text/markdown')
