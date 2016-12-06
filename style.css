@@ -1,0 +1,18 @@
+/* We added some default styles. Feel free to change them */
+body
+{
+	background-color: black;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body > article
+{
+  text-align: center;
+	color: white;
+}
+
+h1
+{
+  margin: 10px 0;
+	color: white;
+}

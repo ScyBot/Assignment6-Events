@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>onclick version</title>
+    <script>
+      function initiElement() {
+        var p = document.getElementById("foo");
+        p.onclick = showLoss;
+      };
+
+      function showLoss(event) {
+        alert("WHY DID YOU CLICK OH GOD NO IM BLEEDING EVERYWHERE");
+		alert("WHY DID YOU DO THAT I AM HURTING ALL OVER NOW IT IS YOUR FAULT");
+      }
+    </script>
+    <style>
+      #foo {
+        border: steelblue 2px;
+      }
+    </style>
+</head>
+
+<body onload="initElement(); initiElement();">
+	<div 
+		style="width:400;height:100;background-color:#9F0D03" 
+ 		class="nope"
+		align="center">
+		Let's Play a Little Game
+	</div>
+	<div 
+ 		style="width:400;height:100;background-color:red" 
+		class="nope"
+		align="center">
+		<p>Sound Fun? Hint Hint, there is a hidden element below :^) Look at the source code to see! </p>
+		<p class="hidden"; id="hey">But First, Press Refresh (this time notice what happens)</p>
+		<p id="bye">Then just move your mouse down</p>
+	</div>
+
+	<div id = "test">Hello1</div>
+	<script> test.addEventListener("mouseenter", function( event ) {
+		event.target.style.color = "red";
+	}, 100);
+	</script>
+
+	<div id = "test2">Hello2</div>
+	<script> test2.addEventListener("mouseenter", function( event ) {
+		event.target.style.color = "yellow";
+	}, 100);
+	</script>
+
+	<div id = "test3">Hello3</div>
+	<script> test3.addEventListener("mouseenter", function( event ) {
+		event.target.style.color = "green";
+	}, 100);
+	</script>
+
+	<div id = "test4">Hello4</div>
+	<script> test4.addEventListener("mouseenter", function( event ) {
+		event.target.style.color = "steelblue";
+	}, 100);
+	</script>
+
+		<div id = "test5">Hello5</div>
+	<script> test5.addEventListener("mouseenter", function( event ) {
+		event.target.style.color = "purple";
+	}, 100);
+	//yes I understand these addEventListeners only count as one for the requirements overall, 
+	//I just wanted it to look pretty
+	</script>
+
+
+
+	<button id = "test-button">Click me! I am the answer! </button>
+	<script>
+		var a = document.getElementById("test");
+		var b = document.getElementById("test2");
+		var c = document.getElementById("test-button");
+
+		c.addEventListener("click", function() {
+			a.innerText = "Hey man";
+			b.innerHTML = "Suh dood, hint hint try scrolling the wheel :D";
+			test2.addEventListener("mouseenter", function(event) {
+				event.target.style.color = "orange";
+				document.getElementById("hey").style.display = "block";
+				document.getElementById("bye").style.display = "none";
+
+			}, 100);
+			document.getElementById("readme").style.display = "block";
+			//document.getElementById("hidden")style.display = "block";
+		});
+		addEventListener("wheel", function(event) {
+			a.innerText = "wow you are good at finding secrets, now I double dare you to double click Hello3 ;)";
+		}, 100);
+
+		test3.addEventListener("dblclick", function(event) {
+			event.target.style.backgroundColor = "black";
+			alert("OH GOD WHAT DID YOU DO TO MY HELLO3? PRESS THE X PRESS IT NOW");
+		})
+
+	</script>
+	</div>
+
+	<span id="foo">
+	<button> Don't you dare click me.. I am nothing
+	</button>
+	</span>
+    <p>Click on <p> one </p>. But here is the twist, the left button is a liar,
+    but the right one tells the truth. </p>
+    <style>
+    body {
+    	display: inline;
+    }
+    p {
+    	display: inherit;
+    }
+ 	</style>
+    <script>
+        function initElement() {
+        var w = document.getElementById("test");
+        w.onclick = showWin;
+      };
+
+      function showWin(event) {
+        alert("You are more clever than you look");
+      };
+    </script>
+    <style>
+    p.hidden {
+    	display:none;
+    }
+    </style>
+    <p class="hidden"; id="readme"> I am sorry for doing this instead of the putting it in url, I found this to be easier.
+    I used a few event listeners such as click, mouse enter, onclick (technically not an event listener, but operates like one), wheel, and double click. Upon clicking the buttons does different effects, I made it so clicking either button changes text or gives you an alert on the page. It also displays the readme text you see here that was hidden. the mouse over even changes the text color of the yellow text in the Hello2 spot, mostly because it is harder to read. It will also make some text disappear in the red box above it with new hidden text appearing. Clicking where Hello1 is/was will solve the riddle of "Click on one" the page asks to begin with. Scrolling the wheel simply creates an alert towards the user. Lastly, double clicking the Hello3 changes the background of the block to black and creates an alert for the user. The comments of this page go into how I answered the difference between onclick vs addEventListener and the difference between innerText and innerHTML.
+    </p>
+<!--The click event is raised when the user clicks on an element.
+The click event will occer after the mousedown and mouseup events.
+The addEventListener method is more flexible and part of the DOM Events specification.
+The onclick method, as comparison, is more specialized towards the mousedown and mouseup events.-->
+
+<!-- innerText retrieves and sets the content of whatever you tag as plain text, innerHTML sets
+the same content but in HTML format -->
+</body>
+
